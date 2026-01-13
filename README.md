@@ -6,11 +6,10 @@
 I am Ajay and I like
 Building things around **secure automation**, **developer tooling**, and **data-driven side projects**.
 
-<a href="https://www.linkedin.com/in/YOUR-LINKEDIN/">LinkedIn</a>
+<a href="https://www.linkedin.com/in/ajayvir-singh-chauhan-329b92188/">LinkedIn</a>
 ·
-<a href="https://YOUR-WEBSITE/">Website</a>
 ·
-<a href="mailto:YOUR.EMAIL@example.com">Email</a>
+<a href="mailto:ajayvirsingh11@hotmail.com">Email</a>
 
 <br/><br/>
 
