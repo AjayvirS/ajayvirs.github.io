@@ -8,7 +8,6 @@ Building things around **secure automation**, **developer tooling**, and **data-
 
 <a href="https://www.linkedin.com/in/ajayvir-singh-chauhan-329b92188/">LinkedIn</a>
 ·
-·
 <a href="mailto:ajayvirsingh11@hotmail.com">Email</a>
 
 <br/><br/>
@@ -53,17 +52,6 @@ Building things around **secure automation**, **developer tooling**, and **data-
 **Daily drivers:** Linux -- Intellij -- AndroidStudio -- Git -- Docker -- Firebase -- CI/CD  
 **Languages I use:** Python -- Shell -- Kotlin -- Java -- Angular (and whatever the project needs)  
 **Interests:** Mobile Development -- Web Development -- DevOps -- Scalability -- Integration
-
----
-
-## Stats
-
-<div align="center">
-
-<img height="160" src="https://github-readme-stats.vercel.app/api?username=AjayvirS&show_icons=true&hide_border=true" />
-<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AjayvirS&layout=compact&hide_border=true" />
-
-</div>
 
 ---
 
