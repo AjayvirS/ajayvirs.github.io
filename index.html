@@ -1,0 +1,303 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <title>{{ site.title }}</title>
+</head>
+<body>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#hobbies">Hobbies</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about" class="section hero">
+  <h1>System.<span class="accent">Init</span>()</h1>
+
+  <div class="card about-card">
+    <img class="avatar" src="{{ '/assets/profile_pic_circle.png' | relative_url }}" alt="Portrait placeholder" loading="lazy">
+
+    <p class="about-text">
+      I’m a developer who enjoys figuring out how things actually run under the hood — especially when containers,
+      build systems, or security boundaries are involved. A lot of my projects start as experiments: trimming setups
+      down to the minimum, isolating environments, or testing how far I can push performance without breaking everything.
+      I’m always happy to contribute to Open Source when I can. This page is a small window into what I’m building,
+      learning, and occasionally over-engineering just for fun.
+    </p>
+  </div>
+</section>
+
+<section id="skills" class="section">
+  <h2>System.<span class="accent">Skills</span></h2>
+
+  <div class="card">
+    <div class="section-meta">
+      <span class="chip">Language stats from GitHub</span>
+      <span id="lang-updated" class="muted"></span>
+    </div>
+
+    <div id="language-stats" class="bars">
+      <div class="skeleton">
+        <div class="sk-line"></div>
+        <div class="sk-line"></div>
+        <div class="sk-line"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="section">
+  <h2>System.<span class="accent">OpenSourceRepositories</span></h2>
+  <div id="github-repos" class="grid">
+    <div class="card muted">Fetching data...</div>
+  </div>
+</section>
+
+<section id="hobbies" class="section">
+  <h2>System.<span class="accent">Hobbies</span></h2>
+
+  <div class="card">
+    <div class="hobby-tags">
+      <span class="tag">🧩 tinkering</span>
+      <span class="tag">📷 photography</span>
+      <span class="tag">🏔️ outdoors</span>
+      <span class="tag">🎧 music</span>
+    </div>
+  </div>
+
+<div class="grid photo-grid">
+  {% assign hobby_images = site.static_files | where_exp: "file", "file.path contains '/assets/hobbies/'" %}
+  {% for image in hobby_images %}
+    {% if image.extname == ".jpg" or image.extname == ".jpeg" or image.extname == ".png" or image.extname == ".webp" %}
+      <button class="card media media-btn"
+              type="button"
+              data-full="{{ image.path | relative_url }}"
+              aria-label="Open photo">
+        <img src="{{ image.path | relative_url }}" alt="Hobby photo" loading="lazy">
+      </button>
+    {% endif %}
+  {% endfor %}
+</div>
+
+<!-- Modal viewer -->
+<div id="photo-modal" class="modal" aria-hidden="true">
+  <div class="modal-backdrop" data-close></div>
+
+  <div class="modal-panel">
+    <button class="modal-close" data-close>×</button>
+    <img id="modal-img" src="" alt="Opened hobby photo">
+  </div>
+</div>
+
+
+</section>
+
+<section id="contact" class="section">
+  <h2>System.<span class="accent">Contact</span></h2>
+
+  <div class="grid contact-grid">
+    <a class="card contact-card" href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.2.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.5-1.3-1.2-1.7-1.2-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 1.7 2.6 1.2 3.2.9.1-.7.4-1.2.7-1.5-2.6-.3-5.4-1.3-5.4-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.4 5.9.4.4.8 1.1.8 2.2v3.2c0 .4.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg>
+      </span>
+      <div>
+        <div class="contact-title">GitHub</div>
+        <div class="muted">@{{ site.github_username }}</div>
+      </div>
+      <span class="chev" aria-hidden="true">↗</span>
+    </a>
+
+    <a class="card contact-card" href="https://www.linkedin.com/in/ajayvir-singh-chauhan-329b92188" target="_blank" rel="noopener">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.05-1.86-3.05-1.86 0-2.15 1.45-2.15 2.95v5.67H9.32V9h3.41v1.56h.05c.48-.9 1.64-1.86 3.37-1.86 3.6 0 4.27 2.37 4.27 5.46v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+      </span>
+      <div>
+        <div class="contact-title">LinkedIn</div>
+        <div class="muted">your-handle</div>
+      </div>
+      <span class="chev" aria-hidden="true">↗</span>
+    </a>
+
+    <a class="card contact-card" href="mailto:you@example.com">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/></svg>
+      </span>
+      <div>
+        <div class="contact-title">Email</div>
+        <div class="muted">ajayvirsingh11@hotmail.com</div>
+      </div>
+      <span class="chev" aria-hidden="true">↗</span>
+    </a>
+  </div>
+</section>
+
+<script>
+  const username = "{{ site.github_username }}";
+
+  // ---------- Repo cards ----------
+  fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=6`)
+    .then(r => r.json())
+    .then(repos => {
+      const container = document.getElementById('github-repos');
+      container.innerHTML = '';
+
+      repos.forEach(repo => {
+        const desc = repo.description ? repo.description : "No description (yet).";
+        const lang = repo.language ? repo.language : "—";
+
+        container.insertAdjacentHTML('beforeend', `
+          <div class="card repo-card">
+            <h3 class="repo-title">${repo.name}</h3>
+            <p class="muted">${desc}</p>
+            <div class="repo-meta">
+              <span class="chip">${lang}</span>
+            </div>
+            <a class="repo-link" href="${repo.html_url}" target="_blank" rel="noopener">[ View Code ]</a>
+          </div>
+        `);
+      });
+    })
+    .catch(() => {
+      document.getElementById('github-repos').innerHTML =
+        '<div class="card muted">Could not load repos right now.</div>';
+    });
+
+  // ---------- Language stats (fancy bars) ----------
+  const cacheKey = `langstats:${username}`;
+  const cacheMaxAgeMs = 1000 * 60 * 60 * 24; // 24h
+
+  function formatPct(x) { return `${(x * 100).toFixed(1)}%`; }
+
+  function renderBars(stats) {
+    const total = Object.values(stats).reduce((a, b) => a + b, 0);
+    const entries = Object.entries(stats)
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 8);
+
+    const container = document.getElementById('language-stats');
+    container.innerHTML = '';
+
+    if (!entries.length || total === 0) {
+      container.innerHTML = '<div class="muted">No language data found.</div>';
+      return;
+    }
+
+    entries.forEach(([lang, bytes]) => {
+      const pct = bytes / total;
+      container.insertAdjacentHTML('beforeend', `
+        <div class="bar-row">
+          <div class="bar-head">
+            <span class="bar-lang">${lang}</span>
+            <span class="bar-pct">${formatPct(pct)}</span>
+          </div>
+          <div class="bar-track" role="img" aria-label="${lang} ${formatPct(pct)}">
+            <div class="bar-fill" style="width:${(pct * 100).toFixed(2)}%"></div>
+          </div>
+        </div>
+      `);
+    });
+  }
+
+  function setUpdated(ts) {
+    const el = document.getElementById('lang-updated');
+    if (!ts) return;
+    const d = new Date(ts);
+    el.textContent = `updated ${d.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: '2-digit' })}`;
+  }
+
+  async function fetchLanguageStats() {
+    // cache first (avoids rate limits + speeds up page)
+    try {
+      const cached = JSON.parse(localStorage.getItem(cacheKey) || 'null');
+      if (cached && cached.ts && (Date.now() - cached.ts) < cacheMaxAgeMs && cached.data) {
+        renderBars(cached.data);
+        setUpdated(cached.ts);
+        return;
+      }
+    } catch (_) {}
+
+    // keep requests reasonable: recent non-fork repos
+    const reposResp = await fetch(`https://api.github.com/users/${username}/repos?sort=pushed&per_page=30`);
+    const repos = (await reposResp.json())
+      .filter(r => !r.fork)
+      .slice(0, 20);
+
+    const totals = {};
+for (const repo of repos) {
+  // Ignore notebook-heavy repos by name or dominant language
+  if (
+    repo.language === "Jupyter Notebook" ||
+    repo.name.toLowerCase().includes("notebook") ||
+    repo.name.toLowerCase().includes("jupyter")
+  ) {
+    continue;
+  }
+
+  try {
+    const lr = await fetch(repo.languages_url);
+    const langBytes = await lr.json();
+
+    for (const [lang, bytes] of Object.entries(langBytes)) {
+      // Ignore notebook language entirely
+      if (lang === "Jupyter Notebook") continue;
+
+      totals[lang] = (totals[lang] || 0) + bytes;
+    }
+  } catch (_) {}
+}
+
+
+    renderBars(totals);
+    const payload = { ts: Date.now(), data: totals };
+    try { localStorage.setItem(cacheKey, JSON.stringify(payload)); } catch (_) {}
+    setUpdated(payload.ts);
+  }
+
+  fetchLanguageStats().catch(() => {
+    document.getElementById('language-stats').innerHTML =
+      '<div class="muted">Could not load language stats right now.</div>';
+  });
+
+// --- Hobby gallery modal ---
+const modal = document.getElementById("photo-modal");
+const modalImg = document.getElementById("modal-img");
+
+function openModal(src) {
+  modalImg.src = src;
+  modal.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+}
+
+function closeModal() {
+  modal.setAttribute("aria-hidden", "true");
+  modalImg.src = "";
+  document.body.style.overflow = "";
+}
+
+document.querySelectorAll(".media-btn").forEach(btn => {
+  btn.addEventListener("click", () => openModal(btn.dataset.full));
+});
+
+modal.addEventListener("click", (e) => {
+  if (e.target.matches("[data-close]")) closeModal();
+});
+
+// Esc to close
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && modal.getAttribute("aria-hidden") === "false") {
+    closeModal();
+  }
+});
+
+</script>
+
+</body>
+</html>

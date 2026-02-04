@@ -53,3 +53,18 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+#-------------------------------------------------------------------------------------------------
+title: Ajay
+description: Developer Portfolio
+baseurl: "" 
+url: "https://ajayvirs.github.io"
+
+theme: minima 
+
+github_username: AjayvirS
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
