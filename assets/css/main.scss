@@ -1,13 +1,16 @@
 ---
 ---
+
 :root {
-  --bg-color: #050505;
-  --card-bg: rgba(17, 17, 17, 0.82);
-  --accent-color: #00f2ff; /* Cyber Cyan */
-  --accent-glow: rgba(0, 242, 255, 0.45);
-  --text-color: #e8e8e8;
-  --muted-color: rgba(232, 232, 232, 0.78);
-  --border-color: rgba(255, 255, 255, 0.10);
+  --bg-color: #070914;
+  --card-bg: rgba(20, 24, 45, 0.82);
+
+  --accent-color: #6a8dff; 
+  --accent-glow: rgba(106, 141, 255, 0.35);
+
+  --text-color: #eef1ff;
+  --muted-color: rgba(238, 241, 255, 0.82);
+  --border-color: rgba(140, 160, 255, 0.14);
 }
 
 * { box-sizing: border-box; }
@@ -19,9 +22,9 @@ body {
   font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
   margin: 0;
   overflow-x: hidden;
+  font-size: 17px;
 }
 
-/* --- Subtle cyberpunk background (animated, not loud) --- */
 body::before,
 body::after {
   content: "";
