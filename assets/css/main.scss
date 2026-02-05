@@ -285,7 +285,7 @@ code { color: rgba(0, 242, 255, 0.85); }
 .repo-link:hover { text-shadow: 0 0 10px rgba(0, 242, 255, 0.35); }
 
 /* --- Contact --- */
-.contact-grid { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.contact-grid { grid-template-columns: repeat(3, minmax(300px, 1fr)); }
 
 .contact-card {
   display: flex;
